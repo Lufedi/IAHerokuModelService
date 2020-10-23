@@ -1,0 +1,11 @@
+###
+POST http://localhost:9000/model
+Content-Type: application/json
+
+{
+  "Description": "description for a model",
+  "UserID": 1,
+  "Name": "name",
+  "Location": "s3"
+}
+

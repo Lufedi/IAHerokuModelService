@@ -9,10 +9,9 @@ func NewRouter() *gin.Engine {
 	router := gin.New()
 	router.Use(gin.Logger())
 	router.Use(gin.Recovery())
-
-	healthController := new(controllers.ModelController)
-	router.GET("/health", healthController.Status)
-
+	modelController := new(controllers.ModelController)
+	router.GET("/health", modelController.Status)
+	router.POST("/upload", modelController.UploadModel)
+	router.POST("/model", modelController.SaveModel)
 	return router
-
 }
